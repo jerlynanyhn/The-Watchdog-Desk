@@ -1,6 +1,6 @@
 'use client';
 
-import { use, useEffect, useMemo, useRef, useState, type FormEvent } from 'react';
+import { use, useEffect, useMemo, useState, type FormEvent } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import {
@@ -53,6 +53,8 @@ interface EditionEntry {
 
 const EDITIONS = editionsData as Record<string, EditionEntry>;
 const ROUND_DURATION_SECONDS = 120;
+const DEFAULT_UNLOCKED = ['editorial-01', 'feature-01', 'entertainment-01'];
+const MAX_DUEL_BONUSES_PER_RIVAL = 3;
 
 export default function PlayEditionPage({
   params,
@@ -64,7 +66,7 @@ export default function PlayEditionPage({
   const searchParams = useSearchParams();
   const edition = EDITIONS[editionId];
 
-  // Optional 1v1 Ghost Duel params from /leaderboard
+  // Optional 1v1 Ghost Duel params from /leaderboard (display only; real values are re-read from DB)
   const duelId = searchParams.get('duelId');
   const duelTargetScore = Number(searchParams.get('targetScore') || 0);
   const duelRival = searchParams.get('rival') || '';
@@ -73,6 +75,7 @@ export default function PlayEditionPage({
   const [alreadyCompleted, setAlreadyCompleted] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
   const [lives, setLives] = useState<number>(5);
+  const [livesClock, setLivesClock] = useState<string>(new Date().toISOString());
   const [timeLeft, setTimeLeft] = useState<number>(ROUND_DURATION_SECONDS);
   const [currentStepIndex, setCurrentStepIndex] = useState<number>(0);
   const [mistakes, setMistakes] = useState<number>(0);
@@ -80,7 +83,6 @@ export default function PlayEditionPage({
     null
   );
   const [submitting, setSubmitting] = useState<boolean>(false);
-  const timeoutHandledRef = useRef<boolean>(false);
 
   // Step 1 (Context Tap-Tray)
   const [step1Answers, setStep1Answers] = useState<string[]>(['', '']);
@@ -92,6 +94,8 @@ export default function PlayEditionPage({
 
   // Step 3 (Active Recall Type-In)
   const [step3Inputs, setStep3Inputs] = useState<string[]>(['', '']);
+
+  const hasLives = lives > 0;
 
   useEffect(() => {
     let active = true;
@@ -108,18 +112,28 @@ export default function PlayEditionPage({
 
       const { data: profile } = await supabase
         .from('profiles')
-        .select('lives_count, lives_updated_at, completed_editions')
+        .select('lives_count, lives_updated_at, completed_editions, unlocked_editions')
         .eq('id', user.id)
         .single();
 
       if (!active) return;
 
       if (profile) {
+        // Block locked editions (typing the URL directly)
+        const unlocked: string[] = Array.isArray(profile.unlocked_editions)
+          ? profile.unlocked_editions
+          : DEFAULT_UNLOCKED;
+        if (!unlocked.includes(editionId)) {
+          router.replace('/newsroom');
+          return;
+        }
+
         const synced = computeCurrentLives(
           profile.lives_count ?? 5,
           profile.lives_updated_at
         );
         setLives(synced.currentLives);
+        setLivesClock(synced.newUpdatedAt);
 
         const completedList: string[] = Array.isArray(profile.completed_editions)
           ? profile.completed_editions
@@ -131,11 +145,12 @@ export default function PlayEditionPage({
             .from('profiles')
             .update({
               lives_count: synced.currentLives,
-              lives_updated_at: new Date().toISOString(),
+              lives_updated_at: synced.newUpdatedAt,
             })
             .eq('id', user.id);
         }
       }
+
       setUserId(user.id);
       setLoading(false);
     }
@@ -146,8 +161,9 @@ export default function PlayEditionPage({
     };
   }, [router, editionId]);
 
+  // Countdown. A missed deadline costs NO life (rule), so nothing else happens at 0.
   useEffect(() => {
-    if (loading || !edition || lives <= 0 || submitting) return;
+    if (loading || !edition || !hasLives || submitting) return;
 
     const timer = window.setInterval(() => {
       setTimeLeft((prev) => {
@@ -160,30 +176,10 @@ export default function PlayEditionPage({
     }, 1000);
 
     return () => window.clearInterval(timer);
-  }, [loading, edition, lives, submitting]);
-
-  useEffect(() => {
-    if (timeLeft !== 0 || loading || !userId || timeoutHandledRef.current) return;
-
-    timeoutHandledRef.current = true;
-
-    async function handleTimeout() {
-      const nextLives = Math.max(0, lives - 1);
-      await supabase
-        .from('profiles')
-        .update({
-          lives_count: nextLives,
-          lives_updated_at: new Date().toISOString(),
-        })
-        .eq('id', userId);
-      setLives(nextLives);
-    }
-
-    handleTimeout();
-  }, [timeLeft, loading, userId, lives]);
+  }, [loading, edition, hasLives, submitting]);
 
   const currentParagraph = edition?.paragraphs[currentStepIndex];
-  
+
   const allEditionWords = useMemo(() => {
     if (!edition) return [];
     const words: WordMeta[] = [];
@@ -199,16 +195,20 @@ export default function PlayEditionPage({
     setFeedback({ type: 'error', text: message });
 
     const nextLives = Math.max(0, lives - 1);
+    // Regen clock only starts when dropping from full; otherwise keep earned progress.
+    const nextClock = lives >= 5 ? new Date().toISOString() : livesClock;
     setLives(nextLives);
+    setLivesClock(nextClock);
 
     if (userId) {
-      await supabase
+      const { error } = await supabase
         .from('profiles')
         .update({
           lives_count: nextLives,
-          lives_updated_at: new Date().toISOString(),
+          lives_updated_at: nextClock,
         })
         .eq('id', userId);
+      if (error) console.error('Life update error:', error.message);
     }
   }
 
@@ -300,7 +300,6 @@ export default function PlayEditionPage({
 
     setSubmitting(true);
 
-    // Raw round performance score (used for Ghost Best & Duel comparison)
     const rawRoundScore = calculateRoundScore({
       wordsSolved: allEditionWords.length,
       remainingLives: lives,
@@ -310,103 +309,117 @@ export default function PlayEditionPage({
       wonDuel: false,
     });
 
-   // 1. Fetch current profile stats, unlocked editions & completed editions
-   const { data: profile, error: fetchErr } = await supabase
-    .from('profiles')
-    .select('total_score, best_round_score, unlocked_editions, completed_editions, duel_wins')
-    .eq('id', userId)
-    .single();
+    // 1. Fetch current profile stats
+    const { data: profile, error: fetchErr } = await supabase
+      .from('profiles')
+      .select('total_score, best_round_score, unlocked_editions, completed_editions, duel_wins')
+      .eq('id', userId)
+      .single();
 
- if (fetchErr) {
-   console.error('Profile fetch error:', fetchErr.message);
- }
+    if (fetchErr) {
+      console.error('Profile fetch error:', fetchErr.message);
+    }
 
- const prevCompleted: string[] = Array.isArray(profile?.completed_editions)
-   ? profile.completed_editions
-   : [];
- const isRepeat = prevCompleted.includes(edition.id);
+    const prevCompleted: string[] = Array.isArray(profile?.completed_editions)
+      ? profile.completed_editions
+      : [];
+    const isRepeat = prevCompleted.includes(edition.id);
 
- // Anti-farming: 0 edition points if this edition was already completed
- const editionPointsEarned = isRepeat ? 0 : rawRoundScore;
+    // Anti-farming: 0 edition points if this edition was already completed
+    const editionPointsEarned = isRepeat ? 0 : rawRoundScore;
 
- // 2. Resolve 1v1 Ghost Duel if active
- let duelBonus = 0;
- let duelOutcome = 'none'; // 'none' | 'won' | 'lost'
+    // 2. Resolve 1v1 Ghost Duel if active (all values re-read from the database)
+    let duelBonus = 0;
+    let duelOutcome = 'none'; // 'none' | 'won' | 'lost'
+    let duelTarget = 0;
 
- if (duelId && duelTargetScore > 0) {
-   const { data: duelRecord } = await supabase
-     .from('press_duels')
-     .select('id, status, opponent_id, target_score')
-     .eq('id', duelId)
-     .single();
+    if (duelId) {
+      const { data: duelRecord } = await supabase
+        .from('press_duels')
+        .select('id, status, challenger_id, opponent_id, edition_id, target_score')
+        .eq('id', duelId)
+        .single();
 
-   if (duelRecord && duelRecord.status === 'pending') {
-     const { data: priorWins } = await supabase
-       .from('press_duels')
-       .select('id')
-       .eq('challenger_id', userId)
-       .eq('opponent_id', duelRecord.opponent_id)
-       .eq('edition_id', edition.id)
-       .eq('status', 'won')
-       .limit(1);
+      const validDuel =
+        duelRecord &&
+        duelRecord.status === 'pending' &&
+        duelRecord.challenger_id === userId &&
+        duelRecord.edition_id === edition.id;
 
-     const alreadyBeatRivalOnEdition = (priorWins?.length ?? 0) > 0;
-     const beatRival = rawRoundScore > duelRecord.target_score;
-     duelOutcome = beatRival ? 'won' : 'lost';
-     duelBonus = beatRival && !alreadyBeatRivalOnEdition ? 150 : 0;
+      if (validDuel && duelRecord) {
+        duelTarget = duelRecord.target_score;
 
-     await supabase
-       .from('press_duels')
-       .update({
-         challenger_score: rawRoundScore,
-         status: beatRival ? 'won' : 'lost',
-       })
-       .eq('id', duelId);
+        const { data: priorWins } = await supabase
+          .from('press_duels')
+          .select('edition_id')
+          .eq('challenger_id', userId)
+          .eq('opponent_id', duelRecord.opponent_id)
+          .eq('status', 'won');
 
-     if (beatRival && duelRecord.opponent_id) {
-       await supabase.from('notifications').insert({
-         user_id: duelRecord.opponent_id,
-         type: 'rematch',
-         message: `Your Copy Desk Ghost (${duelRecord.target_score} pts) was defeated with ${rawRoundScore} pts!`,
-         reference_id: duelId,
-       });
-     }
-   }
- }
+        const wins = priorWins ?? [];
+        const alreadyBeatThisEdition = wins.some((w) => w.edition_id === duelRecord.edition_id);
+        const beatRival = rawRoundScore > duelRecord.target_score;
+        duelOutcome = beatRival ? 'won' : 'lost';
+        duelBonus =
+          beatRival && !alreadyBeatThisEdition && wins.length < MAX_DUEL_BONUSES_PER_RIVAL
+            ? 150
+            : 0;
 
- const totalEarnedThisRun = editionPointsEarned + duelBonus;
- const updatedTotal = (profile?.total_score ?? 0) + totalEarnedThisRun;
- const updatedBest = Math.max(profile?.best_round_score ?? 0, rawRoundScore);
- const updatedRank = calculateRank(updatedTotal);
- const updatedDuelWins = (profile?.duel_wins ?? 0) + (duelOutcome === 'won' ? 1 : 0);
+        const { error: duelErr } = await supabase
+          .from('press_duels')
+          .update({
+            challenger_score: rawRoundScore,
+            status: beatRival ? 'won' : 'lost',
+          })
+          .eq('id', duelId);
+        if (duelErr) console.error('Duel update error:', duelErr.message);
 
- const prevEditions: string[] = Array.isArray(profile?.unlocked_editions)
-   ? profile.unlocked_editions
-   : ['editorial-01', 'feature-01', 'entertainment-01'];
+        if (beatRival) {
+          const { error: notifErr } = await supabase.from('notifications').insert({
+            user_id: duelRecord.opponent_id,
+            type: 'rematch',
+            message: `Your Copy Desk Ghost (${duelRecord.target_score} pts) was defeated with ${rawRoundScore} pts!`,
+            reference_id: duelId,
+          });
+          if (notifErr) console.error('Notification error:', notifErr.message);
+        }
+      }
+    }
 
- const nextEditions =
-   edition.nextEditionId && !prevEditions.includes(edition.nextEditionId)
-     ? [...prevEditions, edition.nextEditionId]
-     : prevEditions;
+    const totalEarnedThisRun = editionPointsEarned + duelBonus;
+    const updatedTotal = (profile?.total_score ?? 0) + totalEarnedThisRun;
+    const updatedBest = Math.max(profile?.best_round_score ?? 0, rawRoundScore);
+    const updatedRank = calculateRank(updatedTotal);
+    const updatedDuelWins = (profile?.duel_wins ?? 0) + (duelOutcome === 'won' ? 1 : 0);
 
- const nextCompleted = isRepeat ? prevCompleted : [...prevCompleted, edition.id];
+    const prevEditions: string[] = Array.isArray(profile?.unlocked_editions)
+      ? profile.unlocked_editions
+      : DEFAULT_UNLOCKED;
 
- // 3. Update profiles
- const { error: updateErr } = await supabase
-   .from('profiles')
-   .update({
-     total_score: updatedTotal,
-     best_round_score: updatedBest,
-     editorial_rank: updatedRank,
-     unlocked_editions: nextEditions,
-     completed_editions: nextCompleted,
-     duel_wins: updatedDuelWins,
-   })
-   .eq('id', userId);
+    const nextEditions =
+      edition.nextEditionId && !prevEditions.includes(edition.nextEditionId)
+        ? [...prevEditions, edition.nextEditionId]
+        : prevEditions;
 
- if (updateErr) {
-   console.error('Profile update error:', updateErr.message);
- }
+    const nextCompleted = isRepeat ? prevCompleted : [...prevCompleted, edition.id];
+
+    // 3. Update profiles
+    const { error: updateErr } = await supabase
+      .from('profiles')
+      .update({
+        total_score: updatedTotal,
+        best_round_score: updatedBest,
+        editorial_rank: updatedRank,
+        unlocked_editions: nextEditions,
+        completed_editions: nextCompleted,
+        duel_wins: updatedDuelWins,
+      })
+      .eq('id', userId);
+
+    if (updateErr) {
+      console.error('Profile update error:', updateErr.message);
+    }
+
     // 4. Insert newly unlocked words into glossary_progress
     const { data: existingWords } = await supabase
       .from('glossary_progress')
@@ -442,7 +455,8 @@ export default function PlayEditionPage({
       lives: String(lives),
       repeat: isRepeat ? '1' : '0',
       duelOutcome,
-      duelTarget: String(duelTargetScore),
+      duelTarget: String(duelTarget),
+      duelBonus: String(duelBonus),
       rival: duelRival,
     });
 
@@ -482,17 +496,25 @@ export default function PlayEditionPage({
         <div className="max-w-md w-full bg-[#F2EDE1] border-4 border-[#101311] shadow-[10px_10px_0px_#101311] p-6 text-center">
           <ShieldAlert className="w-10 h-10 text-[#932A13] mx-auto mb-2" />
           <p className="font-mono text-[11px] font-bold uppercase text-[#932A13]">
-            {timeLeft === 0 ? 'PRESS DEADLINE MISSED' : 'CREDIBILITY METER DEPLETED'}
+            {lives <= 0 ? 'CREDIBILITY METER DEPLETED' : 'PRESS DEADLINE MISSED'}
           </p>
           <h1 className="font-serif text-2xl font-black mt-1">
-            {timeLeft === 0 ? 'Time Ran Out!' : 'Out of Press Lives (0/5)'}
+            {lives <= 0 ? 'Out of Press Lives (0/5)' : 'Time Ran Out!'}
           </h1>
           <p className="font-mono text-xs text-[#2C251E] mt-2 leading-relaxed">
             {lives <= 0
               ? 'Your press passes regenerate automatically (1 life every 10 minutes). Review unlocked words in the Press Glossary while waiting.'
-              : 'You still have press lives remaining—step back to the Newsroom and try this edition again.'}
+              : 'You missed the print deadline, but no life was lost. Try this edition again.'}
           </p>
           <div className="mt-5 flex flex-col gap-2">
+            {timeLeft === 0 && lives > 0 && (
+              <button
+                onClick={() => window.location.reload()}
+                className="w-full py-2.5 bg-[#932A13] text-white font-mono text-xs font-bold uppercase border-2 border-[#101311]"
+              >
+                Try Again
+              </button>
+            )}
             <Link
               href="/newsroom"
               className="w-full py-2.5 bg-[#101311] text-[#F2EDE1] font-mono text-xs font-bold uppercase border-2 border-[#101311]"
@@ -597,6 +619,8 @@ export default function PlayEditionPage({
 
               {feedback && (
                 <div
+                  role="status"
+                  aria-live="polite"
                   className={`mb-4 p-3 border-2 border-[#101311] font-mono text-xs flex items-start gap-2 ${
                     feedback.type === 'error'
                       ? 'bg-[#932A13] text-white'
