@@ -1,0 +1,1010 @@
+{
+    "editorial-01": {
+      "id": "editorial-01",
+      "category": "Editorial",
+      "editionNumber": "EDITION 01",
+      "nextEditionId": "editorial-02",
+      "headline": "The \"Pax Silica\" Tech Hub Must Not Cost Metro Malinam Its Watershed",
+      "paragraphs": [
+        {
+          "step": 1,
+          "type": "context",
+          "instruction": "Tap the 2 formal vocabulary tokens from the word tray to complete Paragraph 1.",
+          "segments": [
+            "City planners hailed the proposed Pax Silica semiconductor zone as Metro Malinam’s ticket to global competitiveness. Yet rushing construction near the Sierra watershed without transparent environmental clearances sparks legitimate public ",
+            ". True economic progress requires careful ",
+            " of fragile ecosystems that sustain millions of residents downstream."
+          ],
+          "blanks": [
+            {
+              "wordId": "outcry",
+              "answer": "OUTCRY",
+              "phonetic": "/ˈaʊt.kraɪ/",
+              "partOfSpeech": "Noun",
+              "definition": "A strong expression of public disapproval or anger.",
+              "synonyms": ["protest", "uproar", "backlash"],
+              "example": "The sudden fare hike sparked a nationwide outcry among daily commuters.",
+              "wrongFeedback": "Look at the public's reaction to bypassed environmental clearances—we need a noun meaning strong public protest."
+            },
+            {
+              "wordId": "stewardship",
+              "answer": "STEWARDSHIP",
+              "phonetic": "/ˈstjuː.əd.ʃɪp/",
+              "partOfSpeech": "Noun",
+              "definition": "The responsible supervising and protection of something worth preserving.",
+              "synonyms": ["conservation", "management", "guardianship"],
+              "example": "Responsible watershed stewardship protects towns from severe flooding.",
+              "wrongFeedback": "Choose the noun meaning careful, responsible protection of our natural resources."
+            }
+          ],
+          "trayOptions": ["OUTCRY", "STEWARDSHIP", "SUBSIDY", "MONOPOLY"]
+        },
+        {
+          "step": 2,
+          "type": "spelling",
+          "instruction": "Proofread Paragraph 2: Click each highlighted typo and select the correct spelling.",
+          "segments": [
+            "Developers promise thousands of high-paying engineering jobs, yet vague drainage blueprints fail to ",
+            " seasonal flood risks for nearby farming barangays. Local officials must resist corporate pressure and uphold ",
+            " safety inspections before signing away protected forest buffers to private industrial contractors."
+          ],
+          "targets": [
+            {
+              "wordId": "mitigate",
+              "typo": "mitagate",
+              "answer": "MITIGATE",
+              "options": ["MITIGATE", "MITAGATE", "MITTIGATE"],
+              "phonetic": "/ˈmɪt.ɪ.ɡeɪt/",
+              "partOfSpeech": "Verb",
+              "definition": "To make something harmful or severe less damaging.",
+              "synonyms": ["reduce", "lessen", "alleviate"],
+              "example": "Planting mangroves helps mitigate storm surge damage along coastal towns.",
+              "wrongFeedback": "Check the second vowel—'mitigate' uses an 'i' after 't', not an 'a'."
+            },
+            {
+              "wordId": "rigorous",
+              "typo": "rigoros",
+              "answer": "RIGOROUS",
+              "options": ["RIGOROUS", "RIGOROS", "RIGOUROUS"],
+              "phonetic": "/ˈrɪɡ.ər.əs/",
+              "partOfSpeech": "Adjective",
+              "definition": "Extremely thorough, exhaustive, and accurate.",
+              "synonyms": ["strict", "thorough", "stringent"],
+              "example": "Bridges must pass rigorous engineering tests before opening to traffic.",
+              "wrongFeedback": "Watch the ending—formal adjectives like 'rigorous' drop the 'u' before '-ous'."
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "type": "typein",
+          "instruction": "Active Recall: Type the 2 final vocabulary words from memory using the editorial clues.",
+          "segments": [
+            "Investors should never be allowed to ",
+            " environmental laws behind closed doors. Before a single bulldozer enters the valley, regulators must publish full impact audits and enforce strict ",
+            " whenever industrial operations threaten Metro Malinam’s drinking water supply."
+          ],
+          "blanks": [
+            {
+              "wordId": "circumvent",
+              "answer": "CIRCUMVENT",
+              "clue": "Verb (10 letters): To find a way around an obstacle, rule, or law.",
+              "phonetic": "/ˌsɜː.kəmˈvent/",
+              "partOfSpeech": "Verb",
+              "definition": "To bypass or find a clever way around a rule or restriction.",
+              "synonyms": ["bypass", "evade", "sidestep"],
+              "example": "No contractor should circumvent safety codes to finish ahead of schedule.",
+              "wrongFeedback": "We need the 10-letter verb meaning to bypass or go around legal rules."
+            },
+            {
+              "wordId": "oversight",
+              "answer": "OVERSIGHT",
+              "clue": "Noun (9 letters): Watchful supervision and regulatory accountability.",
+              "phonetic": "/ˈəʊ.və.saɪt/",
+              "partOfSpeech": "Noun",
+              "definition": "The action of supervising and holding operations accountable to standards.",
+              "synonyms": ["supervision", "scrutiny", "regulation"],
+              "example": "Strict regulatory oversight prevents factories from dumping waste into rivers.",
+              "wrongFeedback": "Think of the 9-letter civic noun meaning strict supervision and regulatory accountability."
+            }
+          ]
+        }
+      ]
+    },
+    "editorial-02": {
+      "id": "editorial-02",
+      "category": "Editorial",
+      "editionNumber": "EDITION 02",
+      "nextEditionId": "editorial-03",
+      "headline": "Holiday Cyber Scams Demand Faster Telco Action Against AI Deepfakes",
+      "paragraphs": [
+        {
+          "step": 1,
+          "type": "context",
+          "instruction": "Tap the 2 formal vocabulary tokens from the word tray to complete Paragraph 1.",
+          "segments": [
+            "As December bonuses circulate across Metro Malinam, syndicates are weaponizing cloned voices and synthetic video calls to deceive unsuspecting families. These hyper-realistic AI deepfakes exploit the ",
+            " of hurried online shoppers, turning festive generosity into devastating financial ",
+            " within seconds."
+          ],
+          "blanks": [
+            {
+              "wordId": "credulity",
+              "answer": "CREDULITY",
+              "phonetic": "/krəˈdjuː.lə.ti/",
+              "partOfSpeech": "Noun",
+              "definition": "A tendency to be too ready to believe that something is real or true.",
+              "synonyms": ["gullibility", "naivety", "trustfulness"],
+              "example": "Scammers prey on the credulity of citizens unfamiliar with voice cloning.",
+              "wrongFeedback": "Choose the noun meaning readiness to believe fake messages too easily."
+            },
+            {
+              "wordId": "plunder",
+              "answer": "PLUNDER",
+              "phonetic": "/ˈplʌn.dər/",
+              "partOfSpeech": "Noun",
+              "definition": "The violent or dishonest stealing of money or goods.",
+              "synonyms": ["theft", "looting", "robbery"],
+              "example": "Cybercriminals celebrate their digital plunder while victims struggle to recover savings.",
+              "wrongFeedback": "Look at the financial loss caused by syndicates—we need a noun meaning stolen wealth or robbery."
+            }
+          ],
+          "trayOptions": ["CREDULITY", "PLUNDER", "AMNESTY", "CONSENSUS"]
+        },
+        {
+          "step": 2,
+          "type": "spelling",
+          "instruction": "Proofread Paragraph 2: Click each highlighted typo and select the correct spelling.",
+          "segments": [
+            "Telecom giants cannot merely issue generic text warnings while fraudulent links slip past automated filters. Regulators must penalize ",
+            " network providers that fail to block spoofed bank numbers, and banks must establish ",
+            " refund protocols for verified victims of synthetic identity fraud."
+          ],
+          "targets": [
+            {
+              "wordId": "negligent",
+              "typo": "neglijent",
+              "answer": "NEGLIGENT",
+              "options": ["NEGLIGENT", "NEGLIJENT", "NEGLIGANT"],
+              "phonetic": "/ˈneɡ.lɪ.dʒənt/",
+              "partOfSpeech": "Adjective",
+              "definition": "Failing to take proper care in doing something.",
+              "synonyms": ["careless", "lax", "remiss"],
+              "example": "A negligent security team left customer passwords exposed online.",
+              "wrongFeedback": "Watch the consonant—'negligent' is spelled with a soft 'g', not a 'j'."
+            },
+            {
+              "wordId": "expeditious",
+              "typo": "expeditios",
+              "answer": "EXPEDITIOUS",
+              "options": ["EXPEDITIOUS", "EXPEDITIOS", "EXPIDITIOUS"],
+              "phonetic": "/ˌek.spəˈdɪʃ.əs/",
+              "partOfSpeech": "Adjective",
+              "definition": "Done with speed and efficiency.",
+              "synonyms": ["swift", "prompt", "rapid"],
+              "example": "Emergency responders ensured an expeditious rescue before the river overflowed.",
+              "wrongFeedback": "Check the ending—formal adjectives like 'expeditious' end in '-ious'."
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "type": "typein",
+          "instruction": "Active Recall: Type the 2 final vocabulary words from memory using the editorial clues.",
+          "segments": [
+            "Digital literacy campaigns help households spot suspicious links, yet individual caution alone cannot defeat industrial-scale cybercrime. Lawmakers must ",
+            " anti-fraud statutes and compel tech platforms to ",
+            " merchant accounts before holiday scams drain another peso."
+          ],
+          "blanks": [
+            {
+              "wordId": "fortify",
+              "answer": "FORTIFY",
+              "clue": "Verb (7 letters): To strengthen or reinforce against attack.",
+              "phonetic": "/ˈfɔː.tɪ.faɪ/",
+              "partOfSpeech": "Verb",
+              "definition": "To strengthen or protect against attack or weakness.",
+              "synonyms": ["strengthen", "reinforce", "secure"],
+              "example": "Banks must fortify their mobile apps with multi-factor biometric checks.",
+              "wrongFeedback": "We need the 7-letter verb meaning to strengthen defenses against attack."
+            },
+            {
+              "wordId": "verify",
+              "answer": "VERIFY",
+              "clue": "Verb (6 letters): To prove or confirm that something is genuine and accurate.",
+              "phonetic": "/ˈver.ɪ.faɪ/",
+              "partOfSpeech": "Verb",
+              "definition": "To confirm or prove that an account, claim, or identity is genuine.",
+              "synonyms": ["confirm", "validate", "check"],
+              "example": "Always verify a caller's identity before sharing any one-time password.",
+              "wrongFeedback": "Think of the 6-letter verb meaning to confirm that an account is genuinely real."
+            }
+          ]
+        }
+      ]
+    },
+    "editorial-03": {
+      "id": "editorial-03",
+      "category": "Editorial",
+      "editionNumber": "EDITION 03",
+      "nextEditionId": null,
+      "headline": "The December Commuter Crisis Exposes Decades of Car-Centric Planning",
+      "paragraphs": [
+        {
+          "step": 1,
+          "type": "context",
+          "instruction": "Tap the 2 formal vocabulary tokens from the word tray to complete Paragraph 1.",
+          "segments": [
+            "Every December, Metro Malinam’s major avenues transform into motionless parking lots, trapping exhausted workers for four hours after every shift. Blaming holiday shopping alone ignores the chronic ",
+            " of reliable mass transit and prolongs an avoidable daily ",
+            " for minimum-wage earners."
+          ],
+          "blanks": [
+            {
+              "wordId": "deficiency",
+              "answer": "DEFICIENCY",
+              "phonetic": "/dɪˈfɪʃ.ən.si/",
+              "partOfSpeech": "Noun",
+              "definition": "A lack or shortage of something essential.",
+              "synonyms": ["shortage", "inadequacy", "scarcity"],
+              "example": "A severe deficiency of night buses leaves hospital workers stranded.",
+              "wrongFeedback": "Look at what Metro Malinam lacks in mass transit—choose the noun meaning a shortage."
+            },
+            {
+              "wordId": "ordeal",
+              "answer": "ORDEAL",
+              "phonetic": "/ɔːˈdɪəl/",
+              "partOfSpeech": "Noun",
+              "definition": "A painful, exhausting, or stressful experience.",
+              "synonyms": ["hardship", "nightmare", "trial"],
+              "example": "Wading through flooded streets turned the evening commute into an ordeal.",
+              "wrongFeedback": "We need the noun describing a long, exhausting, and painful experience."
+            }
+          ],
+          "trayOptions": ["DEFICIENCY", "ORDEAL", "PRIVILEGE", "SURPLUS"]
+        },
+        {
+          "step": 2,
+          "type": "spelling",
+          "instruction": "Proofread Paragraph 2: Click each highlighted typo and select the correct spelling.",
+          "segments": [
+            "Adding temporary traffic enforcers at major intersections cannot solve a structural bottleneck caused by too many private vehicles. Transport authorities must enforce ",
+            " bus lanes along EDSA-Malinam Avenue and guarantee ",
+            " across regional train lines throughout the peak holiday rush."
+          ],
+          "targets": [
+            {
+              "wordId": "exclusive",
+              "typo": "exclusiv",
+              "answer": "EXCLUSIVE",
+              "options": ["EXCLUSIVE", "EXCLUSIV", "EXCLUSSIVE"],
+              "phonetic": "/ɪkˈskluː.sɪv/",
+              "partOfSpeech": "Adjective",
+              "definition": "Restricted or limited to the person, group, or vehicle concerned.",
+              "synonyms": ["dedicated", "sole", "restricted"],
+              "example": "Buses move twice as fast when protected by concrete-barrier exclusive lanes.",
+              "wrongFeedback": "Don't drop the silent final 'e' in 'exclusive'."
+            },
+            {
+              "wordId": "punctuality",
+              "typo": "punctualty",
+              "answer": "PUNCTUALITY",
+              "options": ["PUNCTUALITY", "PUNCTUALTY", "PUNCTUALETY"],
+              "phonetic": "/ˌpʌŋk.tʃuˈæl.ə.ti/",
+              "partOfSpeech": "Noun",
+              "definition": "The quality or habit of arriving or operating strictly on time.",
+              "synonyms": ["promptness", "timeliness", "reliability"],
+              "example": "Train punctuality allows workers to reach their offices without stress.",
+              "wrongFeedback": "Watch the middle syllable—'punctuality' needs an 'i' between 'l' and 't'."
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "type": "typein",
+          "instruction": "Active Recall: Type the 2 final vocabulary words from memory using the editorial clues.",
+          "segments": [
+            "Dignity in mobility should never be treated as a luxury reserved for car owners. Transport leaders must ",
+            " safe pedestrian walkways and ",
+            " modern commuter fleets so families spend December evenings at home rather than stranded on dark sidewalks."
+          ],
+          "blanks": [
+            {
+              "wordId": "prioritize",
+              "answer": "PRIORITIZE",
+              "clue": "Verb (10 letters): To treat something as more important than other things.",
+              "phonetic": "/praɪˈɒr.ɪ.taɪz/",
+              "partOfSpeech": "Verb",
+              "definition": "To designate or treat something as highest in importance.",
+              "synonyms": ["favor", "spotlight", "emphasize"],
+              "example": "City budgets should prioritize public buses over widening private highways.",
+              "wrongFeedback": "We need the 10-letter verb meaning to put pedestrian safety first in importance."
+            },
+            {
+              "wordId": "expand",
+              "answer": "EXPAND",
+              "clue": "Verb (6 letters): To increase in size, number, or capacity.",
+              "phonetic": "/ɪkˈspænd/",
+              "partOfSpeech": "Verb",
+              "definition": "To become or make larger or more extensive in capacity.",
+              "synonyms": ["enlarge", "broaden", "grow"],
+              "example": "The city plans to expand free shuttle routes to outer residential districts.",
+              "wrongFeedback": "Think of the 6-letter verb meaning to grow or increase commuter fleet capacity."
+            }
+          ]
+        }
+      ]
+    },
+    "feature-01": {
+      "id": "feature-01",
+      "category": "Feature Writing",
+      "editionNumber": "EDITION 01",
+      "nextEditionId": "feature-02",
+      "headline": "Inside CICS: Where Algorithms Meet Quiet Campus Resilience",
+      "paragraphs": [
+        {
+          "step": 1,
+          "type": "context",
+          "instruction": "Tap the 2 formal vocabulary tokens from the word tray to complete Paragraph 1.",
+          "segments": [
+            "A few floors above bustling campus corridors rests a community of ",
+            " minds and digital innovators: the College of Informatics and Computing Sciences. Behind every glowing screen lies an intricate system ",
+            " by relentless logic, where even a single misplaced semicolon demands patient problem-solving."
+          ],
+          "blanks": [
+            {
+              "wordId": "inquisitive",
+              "answer": "INQUISITIVE",
+              "phonetic": "/ɪnˈkwɪz.ə.tɪv/",
+              "partOfSpeech": "Adjective",
+              "definition": "Eager to learn, investigate, or discover new knowledge.",
+              "synonyms": ["curious", "investigative", "questioning"],
+              "example": "Inquisitive students stay after lab hours to test how algorithms behave.",
+              "wrongFeedback": "Choose the adjective describing curious minds eager to learn and discover."
+            },
+            {
+              "wordId": "illuminated",
+              "answer": "ILLUMINATED",
+              "phonetic": "/ɪˈluː.mɪ.neɪ.tɪd/",
+              "partOfSpeech": "Adjective",
+              "definition": "Lit up, clarified, or made intellectually clear.",
+              "synonyms": ["lit", "clarified", "enlightened"],
+              "example": "The dark laboratory was illuminated only by rows of dual monitors.",
+              "wrongFeedback": "Look at how glowing screens and logic light up the system—pick the past-participle adjective meaning 'lit up'."
+            }
+          ],
+          "trayOptions": ["INQUISITIVE", "ILLUMINATED", "INDIFFERENT", "OBSCURED"]
+        },
+        {
+          "step": 2,
+          "type": "spelling",
+          "instruction": "Proofread Paragraph 2: Click each highlighted typo and select the correct spelling.",
+          "segments": [
+            "\"May nakaupo na po dito?\" a voice inquired, breaking the stillness of the student lounge. \"Wala po,\" I replied, making room beside my laptop. It was a ",
+            " exchange, yet much like programming, meaningful campus friendships require patience and genuine ",
+            "."
+          ],
+          "targets": [
+            {
+              "wordId": "fleeting",
+              "typo": "fleting",
+              "answer": "FLEETING",
+              "options": ["FLEETING", "FLETING", "FLEATING"],
+              "phonetic": "/ˈfliː.tɪŋ/",
+              "partOfSpeech": "Adjective",
+              "definition": "Lasting for a very short time; brief.",
+              "synonyms": ["brief", "momentary", "passing"],
+              "example": "We shared a fleeting conversation in the hallway before the exam started.",
+              "wrongFeedback": "Remember the double 'e' in 'fleeting'—meaning brief or short-lived."
+            },
+            {
+              "wordId": "collaboration",
+              "typo": "colaberation",
+              "answer": "COLLABORATION",
+              "options": ["COLLABORATION", "COLABERATION", "COLLABURATION"],
+              "phonetic": "/kəˌlæb.əˈreɪ.ʃən/",
+              "partOfSpeech": "Noun",
+              "definition": "The action of working together with others to produce or create something.",
+              "synonyms": ["teamwork", "cooperation", "partnership"],
+              "example": "Successful software deployment relies on close collaboration across the team.",
+              "wrongFeedback": "Watch the double 'l' and the 'o'—'collaboration' is spelled with two l's and '-bora-'."
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "type": "typein",
+          "instruction": "Active Recall: Type the 2 final vocabulary words from memory using the editorial clues.",
+          "segments": [
+            "Beyond endless lines of code, CICS students cultivate ingenuity and ",
+            " that extend far outside computer laboratories. In a discipline where every compiler error invites another attempt, young developers learn that meaningful progress is rarely ",
+            "—sometimes, it is simply the courage to debug again."
+          ],
+          "blanks": [
+            {
+              "wordId": "resilience",
+              "answer": "RESILIENCE",
+              "clue": "Noun (10 letters): The capacity to recover quickly and adapt in the face of difficulties.",
+              "phonetic": "/rɪˈzɪl.jəns/",
+              "partOfSpeech": "Noun",
+              "definition": "The capacity to withstand or recover quickly from difficulties.",
+              "synonyms": ["toughness", "adaptability", "grit"],
+              "example": "Debugging complex code builds patience and mental resilience.",
+              "wrongFeedback": "We need the 10-letter noun meaning the ability to bounce back from setbacks."
+            },
+            {
+              "wordId": "immediate",
+              "answer": "IMMEDIATE",
+              "clue": "Adjective (9 letters): Happening right away or occurring without delay.",
+              "phonetic": "/ɪˈmiː.di.ət/",
+              "partOfSpeech": "Adjective",
+              "definition": "Occurring or done at once; instant.",
+              "synonyms": ["instant", "prompt", "direct"],
+              "example": "Mastery in programming takes practice rather than immediate perfection.",
+              "wrongFeedback": "Think of the 9-letter adjective meaning instant or occurring without delay."
+            }
+          ]
+        }
+      ]
+    },
+    "feature-02": {
+      "id": "feature-02",
+      "category": "Feature Writing",
+      "editionNumber": "EDITION 02",
+      "nextEditionId": "feature-03",
+      "headline": "The Taste of Home: How Kitchen Traditions Bind Filipino Generations",
+      "paragraphs": [
+        {
+          "step": 1,
+          "type": "context",
+          "instruction": "Tap the 2 formal vocabulary tokens from the word tray to complete Paragraph 1.",
+          "segments": [
+            "The aroma of simmering broth and freshly steamed rice evokes memories no photograph could preserve. In Filipino households, recipes pass down through instinct and repetition. A grandmother’s cooking becomes a living ",
+            " of familial history, while each shared meal reinforces the ",
+            " binding generations together."
+          ],
+          "blanks": [
+            {
+              "wordId": "testament",
+              "answer": "TESTAMENT",
+              "phonetic": "/ˈtes.tə.mənt/",
+              "partOfSpeech": "Noun",
+              "definition": "Something that serves as clear proof or evidence of a quality or history.",
+              "synonyms": ["proof", "tribute", "evidence"],
+              "example": "Her handwritten recipe notebook is a testament to decades of family gatherings.",
+              "wrongFeedback": "Choose the noun meaning living proof or evidence of family history."
+            },
+            {
+              "wordId": "kinship",
+              "answer": "KINSHIP",
+              "phonetic": "/ˈkɪn.ʃɪp/",
+              "partOfSpeech": "Noun",
+              "definition": "Blood relationship or a close, affectionate family bond.",
+              "synonyms": ["bond", "affinity", "closeness"],
+              "example": "Sunday lunches strengthen kinship among relatives living in different cities.",
+              "wrongFeedback": "We need the noun describing close family connection and togetherness."
+            }
+          ],
+          "trayOptions": ["TESTAMENT", "KINSHIP", "DISTORTION", "RIVALRY"]
+        },
+        {
+          "step": 2,
+          "type": "spelling",
+          "instruction": "Proofread Paragraph 2: Click each highlighted typo and select the correct spelling.",
+          "segments": [
+            "The kitchen serves as a warm archive where the ",
+            " scent of familiar dishes recalls childhood afternoons and loved ones. Even when families become geographically ",
+            " across continents, cherished culinary traditions bridge the distance and preserve cultural identity across decades."
+          ],
+          "targets": [
+            {
+              "wordId": "irresistible",
+              "typo": "irresistable",
+              "answer": "IRRESISTIBLE",
+              "options": ["IRRESISTIBLE", "IRRESISTABLE", "IRESISTIBLE"],
+              "phonetic": "/ˌɪr.ɪˈzɪs.tə.bəl/",
+              "partOfSpeech": "Adjective",
+              "definition": "Too attractive and tempting to be resisted.",
+              "synonyms": ["tempting", "enticing", "alluring"],
+              "example": "The irresistible aroma of garlic rice drew everyone to the dining table.",
+              "wrongFeedback": "Check the suffix—'irresistible' ends in '-ible', not '-able'."
+            },
+            {
+              "wordId": "dispersed",
+              "typo": "disperssed",
+              "answer": "DISPERSED",
+              "options": ["DISPERSED", "DISPERSSED", "DISPURSED"],
+              "phonetic": "/dɪˈspɜːst/",
+              "partOfSpeech": "Adjective",
+              "definition": "Distributed or spread over a wide area.",
+              "synonyms": ["scattered", "spread", "separated"],
+              "example": "Though dispersed across three time zones, the siblings still cook the same dish.",
+              "wrongFeedback": "Use a single 's' before '-ed'—'dispersed' does not double the 's'."
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "type": "typein",
+          "instruction": "Active Recall: Type the 2 final vocabulary words from memory using the editorial clues.",
+          "segments": [
+            "A single homemade dish can ",
+            " a forgotten childhood memory, while preparing it becomes a ",
+            " expression of love in itself. The ingredients may be simple, yet the taste of home endures through the quiet devotion accompanying every shared meal."
+          ],
+          "blanks": [
+            {
+              "wordId": "evoke",
+              "answer": "EVOKE",
+              "clue": "Verb (5 letters): To bring a memory, feeling, or image vividly into one's mind.",
+              "phonetic": "/ɪˈvəʊk/",
+              "partOfSpeech": "Verb",
+              "definition": "To bring or recall a feeling, memory, or image to the conscious mind.",
+              "synonyms": ["awaken", "arouse", "stir"],
+              "example": "Old folk songs often evoke warm memories of provincial fiestas.",
+              "wrongFeedback": "We need the 5-letter verb meaning to call up or awaken a memory."
+            },
+            {
+              "wordId": "profound",
+              "answer": "PROFOUND",
+              "clue": "Adjective (8 letters): Deeply meaningful, heartfelt, or significant.",
+              "phonetic": "/prəˈfaʊnd/",
+              "partOfSpeech": "Adjective",
+              "definition": "Very great, intense, or deeply meaningful.",
+              "synonyms": ["deep", "heartfelt", "meaningful"],
+              "example": "Sharing food during hard times is a profound gesture of solidarity.",
+              "wrongFeedback": "Think of the 8-letter adjective meaning deeply meaningful or heartfelt."
+            }
+          ]
+        }
+      ]
+    },
+    "feature-03": {
+      "id": "feature-03",
+      "category": "Feature Writing",
+      "editionNumber": "EDITION 03",
+      "nextEditionId": null,
+      "headline": "Ctrl+Z Is Not an Option: Why Digital Footprints Outlive the Delete Button",
+      "paragraphs": [
+        {
+          "step": 1,
+          "type": "context",
+          "instruction": "Tap the 2 formal vocabulary tokens from the word tray to complete Paragraph 1.",
+          "segments": [
+            "In an era where information travels at the speed of a click, a single impulsive post can trigger intense public scrutiny. Viral backlash quickly exposes the ",
+            " of careless online behavior and proves the ",
+            " of digital accountability long after a message leaves its original audience."
+          ],
+          "blanks": [
+            {
+              "wordId": "repercussions",
+              "answer": "REPERCUSSIONS",
+              "phonetic": "/ˌriː.pəˈkʌʃ.ənz/",
+              "partOfSpeech": "Noun",
+              "definition": "Unintended consequences or aftereffects of an event or action.",
+              "synonyms": ["consequences", "fallout", "aftereffects"],
+              "example": "Spreading unverified rumors online carries serious real-world repercussions.",
+              "wrongFeedback": "Look at what follows careless online behavior—we need a noun meaning negative aftereffects."
+            },
+            {
+              "wordId": "necessity",
+              "answer": "NECESSITY",
+              "phonetic": "/nəˈses.ə.ti/",
+              "partOfSpeech": "Noun",
+              "definition": "Something essential or indispensable.",
+              "synonyms": ["requirement", "need", "essential"],
+              "example": "Fact-checking has become a daily necessity for responsible netizens.",
+              "wrongFeedback": "Think about how vital digital accountability is—choose the noun meaning an essential requirement."
+            }
+          ],
+          "trayOptions": ["REPERCUSSIONS", "NECESSITY", "PRIVILEGES", "EXEMPTION"]
+        },
+        {
+          "step": 2,
+          "type": "spelling",
+          "instruction": "Proofread Paragraph 2: Click each highlighted typo and select the correct spelling.",
+          "segments": [
+            "Instant publishing never eliminates a writer’s duty to exercise sound judgment. A careless ",
+            " of a quote can escalate online conflict, while the ",
+            " circulation of screenshots exposes people to lasting harm. Responsible digital participation demands awareness of how words affect real lives."
+          ],
+          "targets": [
+            {
+              "wordId": "misinterpretation",
+              "typo": "misinterpetation",
+              "answer": "MISINTERPRETATION",
+              "options": ["MISINTERPRETATION", "MISINTERPETATION", "MISINTERPRITATION"],
+              "phonetic": "/ˌmɪs.ɪnˌtɜː.prɪˈteɪ.ʃən/",
+              "partOfSpeech": "Noun",
+              "definition": "The action of explaining or understanding something wrongly.",
+              "synonyms": ["misunderstanding", "misreading", "distortion"],
+              "example": "Clear context prevents the misinterpretation of sensitive headlines.",
+              "wrongFeedback": "Watch the root word—it comes from 'interpret,' so keep the 'r' after 'p'."
+            },
+            {
+              "wordId": "permanent",
+              "typo": "permanant",
+              "answer": "PERMANENT",
+              "options": ["PERMANENT", "PERMANANT", "PERMINENT"],
+              "phonetic": "/ˈpɜː.mə.nənt/",
+              "partOfSpeech": "Adjective",
+              "definition": "Lasting or intended to last indefinitely without change.",
+              "synonyms": ["lasting", "enduring", "irreversible"],
+              "example": "Archived web pages create a permanent record of public statements.",
+              "wrongFeedback": "Check the final syllable—'permanent' ends in '-ent,' not '-ant'."
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "type": "typein",
+          "instruction": "Active Recall: Type the 2 final vocabulary words from memory using the editorial clues.",
+          "segments": [
+            "Practicing ",
+            " is vital when navigating heated online spaces, especially when emotions cloud judgment. Editors and users alike must prioritize the ",
+            " of harm when correcting misinformation. Deleting a post may clear a profile, but it never erases public memory."
+          ],
+          "blanks": [
+            {
+              "wordId": "discernment",
+              "answer": "DISCERNMENT",
+              "clue": "Noun (11 letters): The ability to judge what is appropriate, wise, or sensible.",
+              "phonetic": "/dɪˈsɜːn.mənt/",
+              "partOfSpeech": "Noun",
+              "definition": "The ability to judge well and distinguish truth from noise.",
+              "synonyms": ["judgment", "insight", "wisdom"],
+              "example": "Good editors rely on discernment before approving breaking news.",
+              "wrongFeedback": "We need the 11-letter noun describing sound, sensible judgment."
+            },
+            {
+              "wordId": "mitigation",
+              "answer": "MITIGATION",
+              "clue": "Noun (10 letters): The act of reducing the severity, harm, or seriousness of something.",
+              "phonetic": "/ˌmɪt.ɪˈɡeɪ.ʃən/",
+              "partOfSpeech": "Noun",
+              "definition": "The action of reducing the severity or seriousness of harm.",
+              "synonyms": ["reduction", "alleviation", "lessening"],
+              "example": "Issuing an immediate correction helps in the mitigation of public confusion.",
+              "wrongFeedback": "Think of the 10-letter noun meaning the reduction or lessening of harm."
+            }
+          ]
+        }
+      ]
+    },
+    "entertainment-01": {
+      "id": "entertainment-01",
+      "category": "Entertainment",
+      "editionNumber": "EDITION 01",
+      "nextEditionId": "entertainment-02",
+      "headline": "Beyond the Classroom Shelf: How Classic Literature Shapes Student Empathy",
+      "paragraphs": [
+        {
+          "step": 1,
+          "type": "context",
+          "instruction": "Tap the 2 formal vocabulary tokens from the word tray to complete Paragraph 1.",
+          "segments": [
+            "Classic novels do far more than fill library shelves with dusty paper. They capture timeless human emotions like ambition, loyalty, and heartbreak that still resonate today. Exploring diverse literature ",
+            " helps high school readers discover new perspectives while building a deeper ",
+            " for people from different walks of life."
+          ],
+          "blanks": [
+            {
+              "wordId": "genres",
+              "answer": "GENRES",
+              "phonetic": "/ˈʒɒn.rəz/",
+              "partOfSpeech": "Noun",
+              "definition": "Categories of artistic, musical, or literary composition characterized by style or form.",
+              "synonyms": ["categories", "styles", "classifications"],
+              "example": "The campus book club reads across multiple genres, from mystery to historical fiction.",
+              "wrongFeedback": "Choose the plural noun referring to different categories or styles of literature."
+            },
+            {
+              "wordId": "empathy",
+              "answer": "EMPATHY",
+              "phonetic": "/ˈem.pə.θi/",
+              "partOfSpeech": "Noun",
+              "definition": "The ability to understand and share the feelings of another person.",
+              "synonyms": ["compassion", "understanding", "sympathy"],
+              "example": "Reading stories from other cultures fosters genuine empathy among students.",
+              "wrongFeedback": "Look at how reading helps us understand others' feelings—we need the noun meaning shared emotional understanding."
+            }
+          ],
+          "trayOptions": ["GENRES", "EMPATHY", "FOOTNOTES", "APATHY"]
+        },
+        {
+          "step": 2,
+          "type": "spelling",
+          "instruction": "Proofread Paragraph 2: Click each highlighted typo and select the correct spelling.",
+          "segments": [
+            "Analyzing complex stories requires students to look past the surface plot and examine hidden symbolism. An author’s deliberate ",
+            " of contrasting characters often highlights subtle social critiques. Recognizing this underlying ",
+            " structure transforms casual reading into sharp critical thinking across every academic discipline."
+          ],
+          "targets": [
+            {
+              "wordId": "juxtaposition",
+              "typo": "juxstaposition",
+              "answer": "JUXTAPOSITION",
+              "options": ["JUXTAPOSITION", "JUXSTAPOSITION", "JUXTAPOSISION"],
+              "phonetic": "/ˌdʒʌk.stə.pəˈzɪʃ.ən/",
+              "partOfSpeech": "Noun",
+              "definition": "The fact of two things being seen or placed close together with contrasting effect.",
+              "synonyms": ["contrast", "comparison", "pairing"],
+              "example": "The film's juxtaposition of wealth and poverty underscored its central theme.",
+              "wrongFeedback": "There is no 's' after 'x'—'juxtaposition' goes straight from 'x' to 't'."
+            },
+            {
+              "wordId": "narrative",
+              "typo": "narative",
+              "answer": "NARRATIVE",
+              "options": ["NARRATIVE", "NARATIVE", "NARRITIVE"],
+              "phonetic": "/ˈnær.ə.tɪv/",
+              "partOfSpeech": "Noun",
+              "definition": "A spoken or written account of connected events; a story.",
+              "synonyms": ["story", "account", "chronicle"],
+              "example": "A gripping narrative keeps readers turning pages late into the night.",
+              "wrongFeedback": "Watch the double 'r'—'narrative' is spelled with two r's."
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "type": "typein",
+          "instruction": "Active Recall: Type the 2 final vocabulary words from memory using the editorial clues.",
+          "segments": [
+            "Strong reading skills help high school students spot hidden meanings and understand an author’s true purpose. Great writers often use clever ",
+            " to compare everyday objects with deeper human struggles. Developing this sharp ",
+            " prepares teens to question what they read and express thoughtful opinions in class."
+          ],
+          "blanks": [
+            {
+              "wordId": "metaphors",
+              "answer": "METAPHORS",
+              "clue": "Plural Noun (9 letters): Figures of speech that describe one thing as if it were another.",
+              "phonetic": "/ˈmet.ə.fɔːz/",
+              "partOfSpeech": "Noun",
+              "definition": "Figures of speech comparing two unrelated things without using 'like' or 'as'.",
+              "synonyms": ["analogies", "symbols", "allegories"],
+              "example": "Poets rely on vivid metaphors to express complex emotions.",
+              "wrongFeedback": "We need the 9-letter plural noun for figurative comparisons."
+            },
+            {
+              "wordId": "insight",
+              "answer": "INSIGHT",
+              "clue": "Noun (7 letters): A clear, deep understanding of a complicated problem or situation.",
+              "phonetic": "/ˈɪn.saɪt/",
+              "partOfSpeech": "Noun",
+              "definition": "The capacity to gain an accurate and deep intuitive understanding.",
+              "synonyms": ["perception", "awareness", "understanding"],
+              "example": "Her essay offered fresh insight into classic Philippine cinema.",
+              "wrongFeedback": "Think of the 7-letter noun meaning deep, clear understanding."
+            }
+          ]
+        }
+      ]
+    },
+    "entertainment-02": {
+      "id": "entertainment-02",
+      "category": "Entertainment",
+      "editionNumber": "EDITION 02",
+      "nextEditionId": "entertainment-03",
+      "headline": "Crowns, Causes, and the Spotlight: Modern Pageantry as Youth Advocacy",
+      "paragraphs": [
+        {
+          "step": 1,
+          "type": "context",
+          "instruction": "Tap the 2 formal vocabulary tokens from the word tray to complete Paragraph 1.",
+          "segments": [
+            "Modern beauty pageants and major awards shows celebrate far more than glamorous gowns or dazzling trophies. Today’s contestants step onto global stages to champion meaningful social ",
+            " and inspire positive community change. Earning a prestigious crown requires sharp public speaking skills, cultural pride, and genuine ",
+            " under intense pressure."
+          ],
+          "blanks": [
+            {
+              "wordId": "advocacy",
+              "answer": "ADVOCACY",
+              "phonetic": "/ˈæd.və.kə.si/",
+              "partOfSpeech": "Noun",
+              "definition": "Public support for or recommendation of a particular cause or policy.",
+              "synonyms": ["campaigning", "support", "backing"],
+              "example": "Her literacy advocacy brought free storybooks to twenty rural schools.",
+              "wrongFeedback": "Choose the noun meaning active public support for a social cause."
+            },
+            {
+              "wordId": "confidence",
+              "answer": "CONFIDENCE",
+              "phonetic": "/ˈkɒn.fɪ.dəns/",
+              "partOfSpeech": "Noun",
+              "definition": "A feeling of self-assurance arising from one's own abilities or qualities.",
+              "synonyms": ["poise", "assurance", "composure"],
+              "example": "She answered the final question with calm confidence before millions of viewers.",
+              "wrongFeedback": "Look at the poise needed under stage pressure—choose the noun meaning self-assurance."
+            }
+          ],
+          "trayOptions": ["ADVOCACY", "CONFIDENCE", "HESITATION", "INDIFFERENCE"]
+        },
+        {
+          "step": 2,
+          "type": "spelling",
+          "instruction": "Proofread Paragraph 2: Click each highlighted typo and select the correct spelling.",
+          "segments": [
+            "Behind every televised coronation night lies months of intense preparation, media training, and wardrobe styling. Judges evaluate candidates on their intellect, stage presence, and ",
+            " during live question-and-answer rounds. Even a brief moment of ",
+            " can distinguish a memorable finalist from dozens of international competitors."
+          ],
+          "targets": [
+            {
+              "wordId": "eloquence",
+              "typo": "eloqence",
+              "answer": "ELOQUENCE",
+              "options": ["ELOQUENCE", "ELOQENCE", "ELOQUENSE"],
+              "phonetic": "/ˈel.ə.kwəns/",
+              "partOfSpeech": "Noun",
+              "definition": "Fluent or persuasive speaking or writing.",
+              "synonyms": ["articulateness", "fluency", "expressiveness"],
+              "example": "The debate captain spoke with remarkable eloquence during the finals.",
+              "wrongFeedback": "Always pair 'q' with 'u'—'eloquence' needs '-qu-' in the middle."
+            },
+            {
+              "wordId": "spontaneity",
+              "typo": "spontaniety",
+              "answer": "SPONTANEITY",
+              "options": ["SPONTANEITY", "SPONTANIETY", "SPONTANITY"],
+              "phonetic": "/ˌspɒn.təˈneɪ.ə.ti/",
+              "partOfSpeech": "Noun",
+              "definition": "The quality of being natural, unscripted, and authentic in the moment.",
+              "synonyms": ["naturalness", "authenticity", "impulsiveness"],
+              "example": "Her warmth and spontaneity won over both the judges and the live audience.",
+              "wrongFeedback": "Watch the vowel order—'spontaneity' is spelled '-neity', not '-niety'."
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "type": "typein",
+          "instruction": "Active Recall: Type the 2 final vocabulary words from memory using the editorial clues.",
+          "segments": [
+            "Winning an international title or entertainment award turns recipients into influential role models for millions of viewers. Titleholders use their global ",
+            " to raise awareness for education, environmental protection, and youth empowerment. True ",
+            " in the spotlight means transforming personal recognition into lasting service for others."
+          ],
+          "blanks": [
+            {
+              "wordId": "platform",
+              "answer": "PLATFORM",
+              "clue": "Noun (8 letters): A public opportunity or stage used to share ideas or causes.",
+              "phonetic": "/ˈplæt.fɔːm/",
+              "partOfSpeech": "Noun",
+              "definition": "A raised stage or public opportunity to voice beliefs and causes.",
+              "synonyms": ["stage", "forum", "voice"],
+              "example": "Artists often use their social media platform to support disaster relief.",
+              "wrongFeedback": "We need the 8-letter noun meaning a public stage or opportunity to share causes."
+            },
+            {
+              "wordId": "excellence",
+              "answer": "EXCELLENCE",
+              "clue": "Noun (10 letters): The quality of being outstanding or superior in achievement.",
+              "phonetic": "/ˈek.səl.əns/",
+              "partOfSpeech": "Noun",
+              "definition": "The quality of being outstanding or extremely good.",
+              "synonyms": ["distinction", "superiority", "mastery"],
+              "example": "The theater guild was honored for artistic excellence.",
+              "wrongFeedback": "Think of the 10-letter noun meaning outstanding quality or mastery."
+            }
+          ]
+        }
+      ]
+    },
+    "entertainment-03": {
+      "id": "entertainment-03",
+      "category": "Entertainment",
+      "editionNumber": "EDITION 03",
+      "nextEditionId": null,
+      "headline": "Threads of Identity and Style: How Youth Streetwear Shapes Culture",
+      "paragraphs": [
+        {
+          "step": 1,
+          "type": "context",
+          "instruction": "Tap the 2 formal vocabulary tokens from the word tray to complete Paragraph 1.",
+          "segments": [
+            "Fashion has always been much more than simply choosing clothes to wear each morning. From vintage thrift finds to bold streetwear, every outfit reflects personal taste and cultural ",
+            " in daily life. Young designers continually reshape modern style by blending classic fabrics with fearless ",
+            " on city streets."
+          ],
+          "blanks": [
+            {
+              "wordId": "expression",
+              "answer": "EXPRESSION",
+              "phonetic": "/ɪkˈspreʃ.ən/",
+              "partOfSpeech": "Noun",
+              "definition": "The process of making known one's thoughts, identity, or feelings.",
+              "synonyms": ["communication", "representation", "voice"],
+              "example": "Local streetwear serves as a vibrant form of cultural expression.",
+              "wrongFeedback": "Choose the noun meaning how people communicate their identity and taste."
+            },
+            {
+              "wordId": "creativity",
+              "answer": "CREATIVITY",
+              "phonetic": "/ˌkriː.eɪˈtɪv.ə.ti/",
+              "partOfSpeech": "Noun",
+              "definition": "The use of imagination or original ideas to create something new.",
+              "synonyms": ["originality", "imagination", "inventiveness"],
+              "example": "Upcycling vintage denim showcases boundless student creativity.",
+              "wrongFeedback": "Look at what young designers bring to modern style—pick the noun meaning imagination and originality."
+            }
+          ],
+          "trayOptions": ["EXPRESSION", "CREATIVITY", "UNIFORMITY", "MONOTONY"]
+        },
+        {
+          "step": 2,
+          "type": "spelling",
+          "instruction": "Proofread Paragraph 2: Click each highlighted typo and select the correct spelling.",
+          "segments": [
+            "Behind every runway collection lies weeks of sketching, fabric selection, and detailed tailoring work. Modern clothing brands increasingly prioritize ",
+            " by choosing recycled textiles and ethical factory practices. Paying close attention to garment ",
+            " helps shoppers invest in durable pieces rather than wasteful fast-fashion trends."
+          ],
+          "targets": [
+            {
+              "wordId": "sustainability",
+              "typo": "sustainabilty",
+              "answer": "SUSTAINABILITY",
+              "options": ["SUSTAINABILITY", "SUSTAINABILTY", "SUSTANABILITY"],
+              "phonetic": "/səˌsteɪ.nəˈbɪl.ə.ti/",
+              "partOfSpeech": "Noun",
+              "definition": "Avoidance of the depletion of natural resources to maintain ecological balance.",
+              "synonyms": ["eco-friendliness", "conservation", "longevity"],
+              "example": "Eco-conscious labels promote sustainability by using organic woven fibers.",
+              "wrongFeedback": "Don't drop the 'i' before '-ty'—'sustainability' ends in '-bility'."
+            },
+            {
+              "wordId": "craftsmanship",
+              "typo": "craftmanship",
+              "answer": "CRAFTSMANSHIP",
+              "options": ["CRAFTSMANSHIP", "CRAFTMANSHIP", "CRAFTSMENSHIP"],
+              "phonetic": "/ˈkrɑːfts.mən.ʃɪp/",
+              "partOfSpeech": "Noun",
+              "definition": "Skill in a particular craft or high-quality handmade construction.",
+              "synonyms": ["workmanship", "artistry", "skill"],
+              "example": "Hand-embroidered barongs are prized for their intricate craftsmanship.",
+              "wrongFeedback": "Keep the 's' after 'craft'—it is spelled 'craftsmanship'."
+            }
+          ]
+        },
+        {
+          "step": 3,
+          "type": "typein",
+          "instruction": "Active Recall: Type the 2 final vocabulary words from memory using the editorial clues.",
+          "segments": [
+            "Style trends often travel in cycles, bringing back retro silhouettes, bold patterns, and nostalgic accessories for new generations. Teenagers use thoughtful ",
+            " choices to communicate their mood, values, and confidence without saying a word. True personal ",
+            " comes from wearing what feels authentic rather than copying every passing fad."
+          ],
+          "blanks": [
+            {
+              "wordId": "wardrobe",
+              "answer": "WARDROBE",
+              "clue": "Noun (8 letters): A person's collection of clothes or outfits chosen for a specific look.",
+              "phonetic": "/ˈwɔː.drəʊb/",
+              "partOfSpeech": "Noun",
+              "definition": "A person's entire collection of clothes or curated outfits.",
+              "synonyms": ["attire", "apparel", "outfits"],
+              "example": "Building a versatile capsule wardrobe saves money and reduces clutter.",
+              "wrongFeedback": "We need the 8-letter noun referring to a person's collection of outfits."
+            },
+            {
+              "wordId": "aesthetic",
+              "answer": "AESTHETIC",
+              "clue": "Noun (9 letters): A particular visual style or set of artistic principles.",
+              "phonetic": "/esˈθet.ɪk/",
+              "partOfSpeech": "Noun",
+              "definition": "A distinctive visual style, look, or artistic sensibility.",
+              "synonyms": ["style", "look", "sensibility"],
+              "example": "Vintage newspapers inspire the warm visual aesthetic of our game.",
+              "wrongFeedback": "Think of the 9-letter noun describing a distinctive personal style or visual vibe."
+            }
+          ]
+        }
+      ]
+    }
+  }
